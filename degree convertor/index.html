@@ -1,0 +1,47 @@
+<div class="header">
+  <head>
+    <title>JS Intro</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+        <h2>Celsius to fahrenheit</h2>
+        <div class="degree-box-container">
+            <input type="text" id="input" placeholder="Temperature in celsius">
+        </div>
+
+        <div class="degree-box-button">
+            <button type="submit" onclick="convert()">Convert to fahrenheit</button>
+        </div>
+
+        <div class="final-result" id="result">
+
+
+        </div>
+
+        <script>
+            function convert(){
+                
+                let ceval = Number(document.getElementById("input").value)
+                let faval = (ceval*1.8)+32
+                let result = document.getElementById("result")
+                result.innerHTML = faval + "°F"
+            }
+        </script>
+    </div>
+  </body>
+</div>
