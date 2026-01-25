@@ -1,0 +1,47 @@
+<div class="header">
+  <head>
+    <title>JS Intro</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+        <h2>Cm to inches</h2>
+        <div class="length-box-container">
+            <input type="text" id="input" placeholder="Length in cm">
+        </div>
+
+        <div class="length-box-button">
+            <button type="submit" onclick="convert()">Convert to inches</button>
+        </div>
+
+        <div class="final-result" id="result">
+
+
+        </div>
+
+        <script>
+            function convert(){
+                
+                let cmval = Number(document.getElementById("input").value)
+                let inval = cmval/2.54
+                let result = document.getElementById("result")
+                result.innerHTML = inval.toFixed(2)+ " inches"
+            }
+        </script>
+    </div>
+  </body>
+</div>
